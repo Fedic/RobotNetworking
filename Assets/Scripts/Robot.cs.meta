@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ad9c07edad475fc4ca0f66b92dd9d4df
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - deathSound: {fileID: 8300000, guid: dcafca2c8c84659449cec173016e2e69, type: 3}
+  - fireSound: {instanceID: 0}
+  - weakHitSound: {instanceID: 0}
+  - missileprefab: {fileID: 1000013026577686, guid: d2c78b2d67c97420287beecc1c341311,
+      type: 3}
+  - robot: {instanceID: 0}
+  - missileFireSpot: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
