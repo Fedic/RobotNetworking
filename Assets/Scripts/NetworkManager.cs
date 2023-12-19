@@ -14,18 +14,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        base.OnConnectedToMaster();
-        JoinOrCreateRoom();
-    }
-
-    void JoinOrCreateRoom()
-    {
-        PhotonNetwork.JoinOrCreateRoom("GameRoom", new Photon.Realtime.RoomOptions { MaxPlayers = 4 }, null);
+        // Join or create a room with a maximum of 2 players
+        PhotonNetwork.JoinOrCreateRoom("GameRoom", new Photon.Realtime.RoomOptions { MaxPlayers = 2 }, null);
     }
 
     public override void OnJoinedRoom()
     {
-        base.OnJoinedRoom();
         SpawnPlayer();
     }
 
@@ -37,7 +31,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
             if (player.GetComponent<PhotonView>().IsMine)
             {
-                // Assign the player to the game script
                 if (gameScript != null)
                 {
                     gameScript.AssignPlayer(player);
@@ -54,6 +47,4 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             Debug.LogError("Error spawning player! Player prefab or spawn point not set.");
         }
     }
-
-
 }
